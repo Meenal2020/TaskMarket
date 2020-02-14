@@ -6,9 +6,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import com.kodekonveyor.annotations.ExcludeFromCodeCoverage;
+import com.kodekonveyor.annotations.InterfaceClass;
 
 @SpringBootApplication
 @ExcludeFromCodeCoverage("empty")
+@InterfaceClass
 public class SpringConfig extends SpringBootServletInitializer {
 
   public static void main(final String[] args) {
