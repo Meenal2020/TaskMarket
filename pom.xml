@@ -165,7 +165,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>com.kodekonveyor.Application</mainClass>
+							<mainClass>com.kodekonveyor.SpringConfig</mainClass>
 						</configuration>
 					</execution>
 				</executions>

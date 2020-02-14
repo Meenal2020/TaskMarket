@@ -9,17 +9,17 @@ import com.kodekonveyor.annotations.ExcludeFromCodeCoverage;
 
 @SpringBootApplication
 @ExcludeFromCodeCoverage("empty")
-public class Application extends SpringBootServletInitializer {
+public class SpringConfig extends SpringBootServletInitializer {
 
   public static void main(final String[] args) {
-    SpringApplication.run(Application.class, args);
+    SpringApplication.run(SpringConfig.class, args);
   }
 
   @Override
   protected SpringApplicationBuilder configure(
       final SpringApplicationBuilder builder
   ) {
-    return builder.sources(Application.class);
+    return builder.sources(SpringConfig.class);
   }
 
 }
