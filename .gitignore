@@ -28,3 +28,5 @@ taskmarket.stubs
 taskmarket.testdata
 runapache
 taskmarket.zenta
+MANIFEST.MF
+pom.properties
