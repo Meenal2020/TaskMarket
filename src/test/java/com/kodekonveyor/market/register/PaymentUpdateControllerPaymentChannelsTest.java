@@ -70,7 +70,7 @@ public class PaymentUpdateControllerPaymentChannelsTest
     "if sepa payment details are correct, no exception is thrown"
   )
   void test4() {
-    AuthenticatedUserStubs.canBePayed(authenticatedUserService);
+    AuthenticatedUserStubs.kodekonveyorContract(authenticatedUserService);
     ThrowableTester.assertNoException(
         () -> paymentUpdateController
             .call(RegisterTestData.PAYMENT_DETAILS_SEPA)
@@ -83,7 +83,7 @@ public class PaymentUpdateControllerPaymentChannelsTest
     "if transferwise payment details are correct, no exception is thrown"
   )
   void test5() {
-    AuthenticatedUserStubs.canBePayed(authenticatedUserService);
+    AuthenticatedUserStubs.kodekonveyorContract(authenticatedUserService);
     ThrowableTester.assertNoException(
         () -> paymentUpdateController
             .call(RegisterTestData.PAYMENT_DETAILS_TRANSFERWISE)
@@ -108,7 +108,7 @@ public class PaymentUpdateControllerPaymentChannelsTest
     "if paypal payment details are correct, no exception is thrown"
   )
   void test8() {
-    AuthenticatedUserStubs.canBePayed(authenticatedUserService);
+    AuthenticatedUserStubs.kodekonveyorContract(authenticatedUserService);
     ThrowableTester.assertNoException(
         () -> paymentUpdateController.call(RegisterTestData.PAYMENT_DETAILS)
     );

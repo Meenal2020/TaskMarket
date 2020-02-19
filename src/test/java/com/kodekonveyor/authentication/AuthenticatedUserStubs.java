@@ -17,6 +17,15 @@ public class AuthenticatedUserStubs {
         .call();
   }
 
+  public static void
+      kodekonveyorContract(
+          final AuthenticatedUserService authenticatedUserService
+      ) {
+    doReturn(UserEntityTestData.getRoleKodekonveyorContract())
+        .when(authenticatedUserService)
+        .call();
+  }
+
   public static void noMarketuser(
       final AuthenticatedUserService authenticatedUserService
   ) {

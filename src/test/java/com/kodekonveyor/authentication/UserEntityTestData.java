@@ -40,6 +40,18 @@ public class UserEntityTestData {
     return userEntity;
   }
 
+  public static final UserEntity getRoleKodekonveyorContract() {
+    final UserEntity userEntity = get();
+    userEntity.setLogin(null);
+    userEntity.setRoles(
+        Set.of(
+            RoleEntityTestData.getNameCanBePayed(),
+            RoleEntityTestData.getNameKodekonveyorContract()
+        )
+    );
+    return userEntity;
+  }
+
   public static UserEntity getRoleProject() {
     final UserEntity userEntity = get();
     userEntity.setRoles(Set.of(RoleEntityTestData.getNameProject()));

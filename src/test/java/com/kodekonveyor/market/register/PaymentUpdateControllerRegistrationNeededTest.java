@@ -48,7 +48,8 @@ public class PaymentUpdateControllerRegistrationNeededTest
   @Test
   @DisplayName("if the user has can_be_played role, no exception is thrown")
   void test2() {
-    AuthenticatedUserStubs.canBePayed(authenticatedUserService);
+    AuthenticatedUserStubs.kodekonveyorContract(authenticatedUserService);
+
     ThrowableTester.assertNoException(
         () -> paymentUpdateController.call(RegisterTestData.PAYMENT_DETAILS)
     );
