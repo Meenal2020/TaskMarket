@@ -36,7 +36,7 @@ public class AuthenticatedUserStubs {
 
   public static void
       project(final AuthenticatedUserService authenticatedUserService) {
-    doReturn(UserEntityTestData.getRoleProject())
+    doReturn(UserEntityTestData.getRoleProjectName())
         .when(authenticatedUserService)
         .call();
   }
@@ -44,6 +44,13 @@ public class AuthenticatedUserStubs {
   public static void
       registered(final AuthenticatedUserService authenticatedUserService) {
     doReturn(UserEntityTestData.getRoleRegistered())
+        .when(authenticatedUserService)
+        .call();
+  }
+
+  public static void
+      roleExist(final AuthenticatedUserService authenticatedUserService) {
+    doReturn(UserEntityTestData.getRoleExist())
         .when(authenticatedUserService)
         .call();
   }

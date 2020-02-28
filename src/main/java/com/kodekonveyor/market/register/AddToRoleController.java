@@ -30,15 +30,21 @@ public class AddToRoleController {
 
     registrationNeeded(user);
 
-    registeringUser(user);
+    registeringUser(user, projectrole);
     return null;
 
   }
 
-  private void registeringUser(final UserEntity user) {
+  private void
+      registeringUser(final UserEntity user, final String projectrole) {
     if (null != user.getLogin()) {
 
-      user.setRoles(Set.of(RoleUtil.getNameRegistered()));
+      user.setRoles(
+          Set.of(
+              RoleUtil.getNameRegistered(), RoleUtil.getNameCanBePayed(),
+              RoleUtil.getNameProjectRole(projectrole)
+          )
+      );
       userEntityRepository.save(user);
     }
 

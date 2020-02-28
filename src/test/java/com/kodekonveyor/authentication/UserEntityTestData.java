@@ -40,6 +40,19 @@ public class UserEntityTestData {
     return userEntity;
   }
 
+  public static final UserEntity getRoleExist() {
+    final UserEntity userEntity = get();
+    userEntity.setRoles(
+        Set.of(
+            RoleEntityTestData.getNameRoleExist(),
+            RoleEntityTestData.getNameCanBePayed(),
+            RoleEntityTestData.getNameRegistered()
+        )
+    );
+
+    return userEntity;
+  }
+
   public static final UserEntity getRoleKodekonveyorContract() {
     final UserEntity userEntity = get();
     userEntity.setLogin(null);
@@ -55,6 +68,19 @@ public class UserEntityTestData {
   public static UserEntity getRoleProject() {
     final UserEntity userEntity = get();
     userEntity.setRoles(Set.of(RoleEntityTestData.getNameProject()));
+    return userEntity;
+  }
+
+  public static final UserEntity getRoleProjectName() {
+    final UserEntity userEntity = get();
+    userEntity.setRoles(
+        Set.of(
+            RoleEntityTestData.getNameProjectRole(),
+            RoleEntityTestData.getNameCanBePayed(),
+            RoleEntityTestData.getNameRegistered()
+
+        )
+    );
     return userEntity;
   }
 
