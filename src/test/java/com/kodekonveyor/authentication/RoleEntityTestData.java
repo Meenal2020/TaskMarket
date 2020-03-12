@@ -8,6 +8,8 @@ public class RoleEntityTestData {
       "kodekonveyor_contract";
   private static final String ROLE_MANAGER = "kode-konveyor/example_manager";
   public static final String ROLE_PROJECT = "coder";
+  private static final String ROLE_PROJECT_MANAGER =
+      "kodekonveyor_projectmanager";
   public static final String ROLE_REGISTERED = "registered";
   public static final String ROLE_SALES = "kodekonveyor_sales";
 
@@ -38,6 +40,12 @@ public class RoleEntityTestData {
   public static final RoleEntity getNameProject() {
     final RoleEntity role = get();
     role.setName(ROLE_PROJECT);
+    return role;
+  }
+
+  public static final RoleEntity getNameProjectManager() {
+    final RoleEntity role = get();
+    role.setName(ROLE_PROJECT_MANAGER);
     return role;
   }
 

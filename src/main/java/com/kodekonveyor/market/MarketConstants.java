@@ -43,11 +43,27 @@ public class MarketConstants {
 
   public static final String MANAGER = "manager";
 
+  public static final Long MINIMUM_PROJECT_ID = (long) 1;
+
   public static final String PAYMENT_REGIME = "restofworld";
 
   public static final String PAYMMENT_CHANNEL_SEPARATOR = ":";
 
   public static final String PRIVATE_PROJECT_TYPE = "private";
+
+  public static final String PROJECT_ID_NON_POSITIVE_EXCEPTION =
+      "Project Id can only have positive values";
+
+  public static final String PROJECT_MANAGER = "kodekonveyor_projectmanager";
+
+  public static final String PROJECT_NAME_INVALID_EXCEPTION =
+      "Invalid project name format";
+
+  public static final String PROJECT_NAME_NULL_EXCEPTION =
+      "Project name cannot be null";
+
+  public static final String PROJECT_NAME_REGEX =
+      "^kode-konveyor/\\b[A-Za-z0-9]*$";
 
   public static final String REGEX_PAYPAL = "^[A-Za-z0-9+_.-]+@(.+)$";
 

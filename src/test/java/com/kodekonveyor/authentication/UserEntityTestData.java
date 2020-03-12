@@ -71,6 +71,13 @@ public class UserEntityTestData {
     return userEntity;
   }
 
+  public static final UserEntity getRoleProjectManager() {
+    final UserEntity userEntity = get();
+    userEntity.setLogin(null);
+    userEntity.setRoles(Set.of(RoleEntityTestData.getNameProjectManager()));
+    return userEntity;
+  }
+
   public static final UserEntity getRoleProjectName() {
     final UserEntity userEntity = get();
     userEntity.setRoles(

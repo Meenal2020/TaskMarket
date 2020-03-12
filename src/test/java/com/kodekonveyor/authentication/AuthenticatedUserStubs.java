@@ -42,6 +42,14 @@ public class AuthenticatedUserStubs {
   }
 
   public static void
+      projectManager(final AuthenticatedUserService authenticatedUserService) {
+    doReturn(UserEntityTestData.getRoleProjectManager())
+        .when(authenticatedUserService)
+        .call();
+
+  }
+
+  public static void
       registered(final AuthenticatedUserService authenticatedUserService) {
     doReturn(UserEntityTestData.getRoleRegistered())
         .when(authenticatedUserService)
