@@ -1,6 +1,5 @@
 package com.kodekonveyor.market.project;
 
-import org.json.JSONException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -25,11 +24,9 @@ import com.kodekonveyor.market.tasks.UpdateTasksServiceStubs;
 public class UpdateProjectModelControllerUpdateTasksTest
     extends UpdateProjectModelControllerTestBase {
 
-  
-
   @Test
   @DisplayName("Update tasks service is called")
-  public void testUpdateTasksService() throws JSONException {
+  public void testUpdateTasksService() {
     updateProjectModelController
         .call(ProjectModelDTOTestData.get(), ProjectTestData.PROJECT_NAME);
     Mockito.verify(updateTasksService)
@@ -39,7 +36,7 @@ public class UpdateProjectModelControllerUpdateTasksTest
 
   @Test
   @DisplayName("Updated tasks are saved ")
-  public void testSaveTask() throws JSONException {
+  public void testSaveTask() {
     UpdateTasksServiceStubs.behaviour(updateTasksService);
     updateProjectModelController
         .call(ProjectModelDTOTestData.get(), ProjectTestData.PROJECT_NAME);

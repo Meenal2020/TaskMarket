@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.json.JSONException;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -50,7 +49,7 @@ public class UpdateProjectModelController {
 
   @PutMapping(UrlMapConstants.UPDATE_PROJECT_MODEL_PATH)
   public ProjectDTO
-      call(final ProjectModelDTO projectModelDTO, final String projectName) throws JSONException {
+      call(final ProjectModelDTO projectModelDTO, final String projectName) {
     logger.info(LoggingMarkerConstants.PROJECT, projectName);
 
     final ProjectEntity project = projectEntityRepository
@@ -69,8 +68,9 @@ public class UpdateProjectModelController {
     );
 
     updateTasks(projectModelDTO);
-   
-    ProjectEntity projectEntityUpdated = projectEntityRepository.save(project);
+
+    final ProjectEntity projectEntityUpdated =
+        projectEntityRepository.save(project);
 
     logger.debug(
         LoggingMarkerConstants.PROJECT,
@@ -79,12 +79,11 @@ public class UpdateProjectModelController {
 
     return getProjectDTO(projectEntityUpdated);
 
-
   }
 
   private void updateTasks(
       final ProjectModelDTO projectModelDTO
-  ) throws JSONException {
+  ) {
     final Set<TaskDTO> projectDTOTasks = projectModelDTO.getTask();
     final List<TaskEntity> tasks = convertTaskDTOs(projectDTOTasks);
     for (final TaskEntity task : tasks) {
