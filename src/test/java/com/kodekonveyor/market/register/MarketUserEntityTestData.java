@@ -150,4 +150,11 @@ public class MarketUserEntityTestData {
     return marketUserEntity;
   }
 
+  public static MarketUserEntity getRoleRegistered() {
+    final MarketUserEntity marketUserEntity = get();
+    marketUserEntity.setId(MarketUserTestData.ID_REGISTERED);
+    marketUserEntity.setUser(UserEntityTestData.getRoleRegistered());
+    return marketUserEntity;
+  }
+
 }

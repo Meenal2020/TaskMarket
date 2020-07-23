@@ -58,6 +58,12 @@ public class MarketUserEntityRepositoryStubs {
         .when(marketUserEntityRepository)
         .findByUser(UserEntityTestData.getRoleProjectManager());
 
+    doReturn(
+        Optional.of(MarketUserEntityTestData.getRoleRegistered())
+    )
+        .when(marketUserEntityRepository)
+        .findByUser(UserEntityTestData.getRoleRegistered());
+
     doAnswer(new Answer<Void>() {
 
       @Override
@@ -109,6 +115,11 @@ public class MarketUserEntityRepositoryStubs {
     doReturn(Optional.of(MarketUserEntityTestData.getZeroBalance()))
         .when(marketUserEntityRepository)
         .findByUser(UserEntityTestData.getIdForZeroBalanceForProjectManager());
+    doReturn(
+        Optional.empty()
+    )
+        .when(marketUserEntityRepository)
+        .findByUser(UserEntityTestData.getRoleRegistered());
   }
 
   public static void userBalanceEqualToBudget(

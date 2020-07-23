@@ -23,6 +23,9 @@ public class RoleEntityRepositoryStubs {
     doReturn(Optional.of(RoleEntityTestData.getNameProjectManager()))
         .when(roleEntityRepository)
         .findByName(RoleTestData.NAME_PROJECT_MANAGER);
+    doReturn(Optional.of(RoleEntityTestData.getNameRegistered()))
+        .when(roleEntityRepository)
+        .findByName(RoleTestData.NAME_REGISTERED);
 
   }
 

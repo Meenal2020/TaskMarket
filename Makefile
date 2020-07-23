@@ -2,6 +2,7 @@ export MODEL_BASENAME=taskmarket
 export REPO_NAME=TaskMarket
 export GITHUB_ORGANIZATION=kode-konveyor
 export CONSISTENCY_INPUTS=taskmarket.rich shippable/behaviours.xml
+export issuetoken=5d73855aff1554e8e064a1e6dc0e665135835e43
 LANGUAGE=java
 BEFORE_ALL=checksource runapache
 BEFORE_CLEAN=removeGeneratedMetaInf

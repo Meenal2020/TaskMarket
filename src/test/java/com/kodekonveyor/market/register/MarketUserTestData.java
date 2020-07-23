@@ -53,4 +53,6 @@ public class MarketUserTestData {
 
   public static final Long USER_BALANCE_AFTER_DEDUCTION = 546_000L;
 
+  public static final Long ID_REGISTERED = 1828L;
+
 }

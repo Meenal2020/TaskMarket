@@ -27,12 +27,17 @@ public class UserEntityRepositoryStubs {
         .findByLogin(UserTestData.LOGIN_PROJECTMANAGER);
     doReturn(Optional.empty()).when(userEntityRepository)
         .findByLogin(UserTestData.LOGIN_BAD);
-    doReturn(Optional.of(UserEntityTestData.getIdNoMarketUser())).when(userEntityRepository)
-            .findByLogin(UserTestData.LOGIN_NO_MARKET_USER);
+    doReturn(Optional.of(UserEntityTestData.getIdNoMarketUser()))
+        .when(userEntityRepository)
+        .findByLogin(UserTestData.LOGIN_NO_MARKET_USER);
 
     doReturn(List.of(UserEntityTestData.getRoleProjectManager()))
         .when(userEntityRepository)
         .findByRole(RoleEntityTestData.getNameProjectManager());
+
+    doReturn(List.of(UserEntityTestData.getRoleRegistered()))
+        .when(userEntityRepository)
+        .findByRole(RoleEntityTestData.getNameRegistered());
 
     final Answer<UserEntity> answer = new Answer<>() {
 
@@ -48,4 +53,13 @@ public class UserEntityRepositoryStubs {
         .then(answer);
 
   }
+
+  public static void
+      noRegisteredUser(final UserEntityRepository userEntityRepository) {
+    doReturn(List.of())
+        .when(userEntityRepository)
+        .findByRole(RoleEntityTestData.getNameRegistered());
+
+  }
+
 }

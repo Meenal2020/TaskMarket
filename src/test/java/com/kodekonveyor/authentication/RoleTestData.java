@@ -32,4 +32,7 @@ public class RoleTestData {
   public static final Long ID_TECHNICAL_ROLE = 1901L;
   public static final String TECHNICAL_ROLE = "technical";
 
+  public static final Long ID_REGISTERED_ROLE = 1201L;
+  public static final String NAME_REGISTERED = "registered";
+
 }

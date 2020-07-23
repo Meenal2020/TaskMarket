@@ -19,4 +19,6 @@ public class UrlMapConstants {
   public static final String GRAB_TASK_PATH =
       "/member/task/{taskId}/grab";
   public static final String LIST_TASK_PATH = "/member/task";
+  public static final String LIST_REGISTERED_USERS_PATH =
+      "/member/list_registered_users";
 }

@@ -63,4 +63,11 @@ public class MarketUserDTOTestData {
     marketUserDTO.setId(MarketUserTestData.ID_CAN_BE_PAID);
     return marketUserDTO;
   }
+
+  public static MarketUserDTO getRoleRegistered() {
+    final MarketUserDTO marketUserDTO = get();
+    marketUserDTO.setUser(UserTestData.ID_REGISTERED);
+    marketUserDTO.setId(MarketUserTestData.ID_REGISTERED);
+    return marketUserDTO;
+  }
 }

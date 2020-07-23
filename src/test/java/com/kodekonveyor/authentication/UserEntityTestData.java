@@ -118,6 +118,13 @@ public class UserEntityTestData {
     userEntity.setLogin(UserTestData.LOGIN_TECHNICAL);
     userEntity.setRole(Set.of(RoleEntityTestData.getNameTechnical()));
     return userEntity;
-  };
+  }
+
+  public static UserEntity getRoleRegistered() {
+    final UserEntity userEntity = get();
+    userEntity.setId(UserTestData.ID_REGISTERED);
+    userEntity.setRole(Set.of(RoleEntityTestData.getNameRegistered()));
+    return userEntity;
+  }
 
 }
